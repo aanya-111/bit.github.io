@@ -48,6 +48,7 @@
             align-items: center;
             gap: 20px;
             margin-bottom: 30px;
+            white-space: nowrap; /* Ensures headline and logos stay on one line */
         }
 
         .hero-title-row h1 {
@@ -59,18 +60,22 @@
             font-weight: normal;
         }
 
-        .partner-box {
+        .partner-container {
             background: white;
-            padding: 10px;
+            padding: 10px 15px;
             border-radius: 4px;
             display: flex;
             gap: 15px;
             align-items: center;
+            flex-shrink: 0;
         }
 
-        .partner-box img {
-            height: 50px; /* Standardized logo height */
+        /* Updated height: 0.75 inches = 72px */
+        .partner-container img {
+            height: 72px; 
             width: auto;
+            display: block;
+            object-fit: contain;
         }
 
         /* THE REQUESTED PARAGRAPH */
@@ -125,7 +130,7 @@
 </head>
 <body>
 
-    <img src="Screenshot 2026-01-11 at 2.24.12 PM.jpg" class="header-img" alt="Navigation">
+    <img src="images/hero.jpg" class="header-img" alt="Navigation">
 
     <section class="hero">
         <div class="hero-left">
@@ -138,7 +143,8 @@
             </div>
 
             <p class="hero-description">
-                bitWise Academy and RAFT have partnered to create a seamless learning experience, successfully bridging STEAM enrichment, online learning, and practical, hands-on projects. Students master emerging technology areas, math, science, coding, and engineering concepts. They immediately reinforce their knowledge by implementing these concepts with RAFT's high-quality STEAM kits.            </p>
+                bitWise Academy and RAFT have partnered to create a seamless learning experience, successfully bridging STEAM enrichment, online learning, and practical, hands-on projects. Students master emerging technology areas, math, science, coding, and engineering concepts. They immediately reinforce their knowledge by implementing these concepts with RAFT's high-quality STEAM kits.
+            </p>
         </div>
 
         <div class="hero-right">
