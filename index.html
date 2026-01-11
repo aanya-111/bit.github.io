@@ -3,138 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitwise x RAFT Collaboration</title>
+    <title>Bitwise x RAFT</title>
     <style>
-        /* CSS Reset & Core Styles */
+        :root {
+            --bitwise-blue: #002855;
+            --raft-green: #8dc63f;
+            --text-dark: #333333;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
         }
 
         body, html {
-            height: 100%;
-            overflow: hidden; /* Ensures no scrolling (Above the fold) */
-            background-color: #ffffff;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            background-color: #f4f4f4;
         }
 
-        /* Header Section */
+        /* The blue diagonal background block */
+        .bg-slant {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(105deg, var(--bitwise-blue) 45%, transparent 45.1%);
+            z-index: -1;
+        }
+
         header {
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            padding: 20px 50px;
-            gap: 30px;
+            padding: 30px 60px;
+            gap: 25px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            gap: 20px;
         }
 
         .logo {
-            height: 50px; /* Standardized height for both logos */
+            height: 40px;
             width: auto;
             object-fit: contain;
         }
 
-        /* Hero Main Section */
         main {
-            display: flex;
-            height: calc(100vh - 90px); /* Subtracts header height */
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: calc(100vh - 120px);
             align-items: center;
-            padding: 0 8% 5% 8%;
+            padding: 0 10%;
         }
 
-        .hero-content {
-            flex: 1;
-            padding-right: 40px;
+        .content-left {
+            color: white;
+            padding-right: 50px;
         }
 
-        .hero-content h1 {
-            font-size: 3.5rem;
-            color: #222;
-            line-height: 1.1;
+        .content-left h1 {
+            font-size: 4.5rem;
+            font-weight: 900;
+            line-height: 1;
             margin-bottom: 20px;
+            text-transform: uppercase;
         }
 
-        .hero-content p {
-            font-size: 1.2rem;
-            color: #555;
-            max-width: 500px;
-            margin-bottom: 30px;
+        .content-left p {
+            font-size: 1.4rem;
+            line-height: 1.4;
+            opacity: 0.9;
         }
 
-        /* Image Section */
-        .hero-image-container {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .image-right {
             position: relative;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
         }
 
-        .kid-image {
-            width: 100%;
-            max-width: 550px;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        .main-img {
+            width: 110%;
+            max-width: 650px;
+            border-radius: 30px;
+            border: 15px solid white;
+            box-shadow: 20px 20px 0px var(--raft-green);
+            transform: rotate(-2deg);
         }
 
-        /* Call to Action Button */
-        .cta-button {
-            display: inline-block;
-            background-color: #000; /* Adjust to match the specific blue/black in design */
+        .cta-container {
+            position: absolute;
+            bottom: -40px;
+            right: 0;
+        }
+
+        .btn {
+            background-color: var(--raft-green);
             color: white;
             text-decoration: none;
-            padding: 15px 35px;
-            border-radius: 50px;
+            padding: 20px 40px;
+            font-size: 1.5rem;
             font-weight: bold;
-            font-size: 1.1rem;
-            transition: transform 0.2s, background-color 0.2s;
-            position: absolute;
-            bottom: -20px;
-            right: 10%;
+            border-radius: 50px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+            display: block;
+            text-align: center;
         }
 
-        .cta-button:hover {
-            background-color: #333;
-            transform: translateY(-3px);
+        .btn:hover {
+            transform: scale(1.05);
+            background-color: #7ab332;
         }
 
-        /* Responsive tweak for smaller screens */
-        @media (max-width: 900px) {
-            main {
-                flex-direction: column;
-                text-align: center;
-                overflow-y: auto;
-            }
-            .hero-content {
-                padding-right: 0;
-                margin-bottom: 30px;
-            }
-            .cta-button {
-                position: static;
-                margin-top: 20px;
-            }
+        /* Ensuring layout stays static and above fold */
+        @media (min-aspect-ratio: 16/9) {
+            .content-left h1 { font-size: 3.5rem; }
+            .main-img { max-width: 500px; }
         }
     </style>
 </head>
 <body>
 
+    <div class="bg-slant"></div>
+
     <header>
-        <img src="image_5a07f9.png" alt="BitWise Logo" class="logo">
-        <img src="image_5a084d.png" alt="RAFT Logo" class="logo">
+        <div class="logo-container">
+            <img src="image_5a07f9.png" alt="BitWise Logo" class="logo">
+            <img src="image_5a084d.png" alt="RAFT Logo" class="logo">
+        </div>
     </header>
 
     <main>
-        <div class="hero-content">
-            <h1>Ignite Curiosity Through STEM</h1>
-            <p>Empowering the next generation of innovators with hands-on learning kits and digital literacy tools.</p>
+        <div class="content-left">
+            <h1>HANDS-ON<br>LEARNING</h1>
+            <p>Combining Bitwise digital skills with RAFT’s interactive STEAM kits to power the next generation of makers.</p>
         </div>
 
-        <div class="hero-image-container">
-            <img src="image_5a0bd5.png" alt="Student learning on computer" class="kid-image">
+        <div class="image-right">
+            <img src="image_5a0bd5.png" alt="Student at computer" class="main-img">
             
-            <a href="https://raft.net/for-educators/steam-activities/steam-project-kits/" class="cta-button">
-                Explore RAFT Kits
-            </a>
+            <div class="cta-container">
+                <a href="https://raft.net/for-educators/steam-activities/steam-project-kits/" class="btn">
+                    Explore RAFT Kits
+                </a>
+            </div>
         </div>
     </main>
 
