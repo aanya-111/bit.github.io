@@ -15,13 +15,13 @@
         body, html {
             height: 100vh;
             width: 100vw;
-            overflow: hidden;
-            background-color: #ffffff;
+            overflow: hidden; /* Strictly above the fold */
             display: flex;
             flex-direction: column;
+            background-color: #ffffff;
         }
 
-        /* Top Bar & Nav Area */
+        /* Top Navigation Area */
         .header-img {
             width: 100%;
             display: block;
@@ -32,31 +32,29 @@
             background-color: #373a6d; /* Exact navy from design */
             flex: 1;
             display: flex;
+            flex-direction: column;
             padding: 40px 60px;
             color: white;
             position: relative;
-            align-items: center;
         }
 
-        .hero-left {
-            flex: 1.2;
-            padding-right: 40px;
-        }
-
-        .hero-title-row {
+        /* One-line Heading and Logos */
+        .hero-header-row {
             display: flex;
             align-items: center;
-            gap: 20px;
+            justify-content: flex-start;
+            white-space: nowrap;
+            gap: 30px;
             margin-bottom: 30px;
-            white-space: nowrap; /* Ensures headline and logos stay on one line */
         }
 
-        .hero-title-row h1 {
+        .hero-header-row h1 {
             font-size: 3.5rem;
             line-height: 1.1;
+            font-weight: bold;
         }
 
-        .hero-title-row h1 span {
+        .hero-header-row h1 span {
             font-weight: normal;
         }
 
@@ -70,15 +68,25 @@
             flex-shrink: 0;
         }
 
-        /* Updated height: 0.75 inches = 72px */
+        /* Set to exactly 0.75 inches (72px at 96dpi) */
         .partner-container img {
-            height: 60px; 
+            height: 72px; 
             width: auto;
             display: block;
             object-fit: contain;
         }
 
-        /* THE REQUESTED PARAGRAPH */
+        /* Content Layout: Text Left, Kid Image Right */
+        .hero-body {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .hero-left {
+            flex: 1.2;
+        }
+
         .hero-description {
             font-size: 1.35rem;
             line-height: 1.5;
@@ -130,25 +138,26 @@
 </head>
 <body>
 
-    <img src="images/hero.jpg" class="header-img" alt="Navigation">
+    <img src="Screenshot 2026-01-11 at 2.25.04 PM.png" class="header-img" alt="Navigation">
 
     <section class="hero">
-        <div class="hero-left">
-            <div class="hero-title-row">
-                <h1>Learn. <span>Build. Innovate. Together!</span></h1>
-                <div class="partner-container">
-                    <img src="images/bitlogo.png" alt="BitWise Logo">
-                    <img src="images/raftlogo.png" alt="RAFT Logo">
-                </div>
+        <div class="hero-header-row">
+            <h1>Learn. <span>Build. Innovate. Together!</span></h1>
+            <div class="partner-container">
+                <img src="image_5a07f9.png" alt="BitWise Logo">
+                <img src="image_5a084d.png" alt="RAFT Logo">
             </div>
-
-            <p class="hero-description">
-                bitWise Academy and RAFT have partnered to create a seamless learning experience, successfully bridging STEAM enrichment, online learning, and practical, hands-on projects. Students master emerging technology areas, math, science, coding, and engineering concepts. They immediately reinforce their knowledge by implementing these concepts with RAFT's high-quality STEAM kits.
-            </p>
         </div>
 
-        <div class="hero-right">
-            <img src="images/image_5a0bd5.png" class="kid-photo" alt="Student coding">
+        <div class="hero-body">
+            <div class="hero-left">
+                <p class="hero-description">
+                    bitWise Academy and RAFT have partnered to create a seamless learning experience, successfully bridging STEAM enrichment, online learning, and practical, hands-on projects. Students master emerging technology areas, math, science, coding, and engineering concepts. They immediately reinforce their knowledge by implementing these concepts with RAFT's high-quality STEAM kits.
+                </p>
+            </div>
+            <div class="hero-right">
+                <img src="image_5a0bd5.png" class="kid-photo" alt="Student coding">
+            </div>
         </div>
     </section>
 
