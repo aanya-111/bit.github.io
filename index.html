@@ -15,23 +15,21 @@
         body, html {
             height: 100vh;
             width: 100vw;
-            overflow: hidden;
+            overflow: hidden; /* Strictly above the fold */
             display: flex;
             flex-direction: column;
             background-color: #ffffff;
         }
 
-        /* Top Nav Image Area */
+        /* Top Navigation Area */
         .header-img {
             width: 100%;
             display: block;
-            min-height: 50px;
-            background: #f0f0f0; /* Fallback color */
         }
 
         /* Hero Section */
         .hero {
-            background-color: #373a6d;
+            background-color: #373a6d; /* Exact navy from design */
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -70,7 +68,7 @@
             flex-shrink: 0;
         }
 
-        /* Standardized Logo Height (0.75 inch) */
+        /* Set to exactly 0.75 inches (72px at 96dpi) */
         .partner-container img {
             height: 72px; 
             width: auto;
@@ -78,7 +76,7 @@
             object-fit: contain;
         }
 
-        /* Layout for Text & Kid Photo */
+        /* Content Layout: Text Left, Kid Image Right */
         .hero-body {
             display: flex;
             align-items: flex-start;
@@ -106,7 +104,6 @@
             width: 100%;
             max-width: 600px;
             border-radius: 5px;
-            background: #2a2c54; /* Visual indicator if image fails */
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
@@ -136,18 +133,18 @@
             font-weight: 900;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
+
     </style>
 </head>
 <body>
 
-    <img src="assets/img/Screenshot 2026-01-11 at 2.25.04 PM.png" class="header-img" alt="Navigation">
+    <img src="assets/img/hero.jpg" class="header-img" alt="Navigation">
 
     <section class="hero">
         <div class="hero-header-row">
-            <h1>Learn. <span>Build. Innovate. <b style="font-weight: 900;">Together!</b></span></h1>
-            <div class="partner-container">
-                <img src="assets/img/image_5a07f9.png" alt="BitWise Logo">
-                <img src="assets/img/image_5a084d.png" alt="RAFT Logo">
+                <h1>Learn. <span>Build. Innovate. <b style="font-weight: 900;">Together!</b></span></h1>            <div class="partner-container">
+                <img src="assets/img/bitlogo.png" alt="BitWise Logo">
+                <img src="assets/img/raftlogo.png" alt="RAFT Logo">
             </div>
         </div>
 
@@ -175,3 +172,6 @@
 
 </body>
 </html>
+
+
+
