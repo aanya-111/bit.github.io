@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitwise x RAFT Collaboration</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body, html {
+            /* Changed from 100vh/hidden to allow scrolling on mobile */
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+        }
+
+        .header-img {
+            width: 100%;
+            display: block;
+        }
+
+        .hero {
+            background-color: #373a6d;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 40px 60px;
+            color: white;
+            position: relative;
+        }
+
+        .hero-header-row {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap; /* Allows logos to wrap on small screens */
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .hero-header-row h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            font-weight: bold;
+        }
+
+        .partner-container {
+            background: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .partner-container img {
+            height: 60px; /* Slightly smaller for better fit */
+            width: auto;
+            object-fit: contain;
+        }
+
+        .hero-body {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .hero-left { flex: 1.2; }
+        .hero-right { flex: 1; display: flex; justify-content: center; }
+
+        .hero-description {
+            font-size: 1.35rem;
+            line-height: 1.5;
+            color: #ffffff;
+            max-width: 850px;
+        }
+
+        .kid-photo {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 5px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .bottom-cta {
+            min-height: 180px;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 60px;
+        }
+
+        .cta-text {
+            color: #2d2e5f;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .explore-btn {
+            background-color: #3fc3ff;
+            color: #000;
+            text-decoration: none;
+            padding: 18px 45px;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 900;
+            text-align: center;
+        }
+
+        /* --- RESPONSIVE OVERRIDES --- */
+        @media (max-width: 992px) {
+            .hero, .bottom-cta { padding: 30px 20px; }
+            
+            .hero-header-row h1 { font-size: 2.5rem; white-space: normal; }
+            
+            .hero-body, .bottom-cta {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-description { font-size: 1.1rem; }
+
+            .cta-text { font-size: 1.5rem; margin-bottom: 20px; }
+            
+            .partner-container { margin: 0 auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <img src="assets/img/hero.jpg" class="header-img" alt="Navigation">
+
+    <section class="hero">
+        <div class="hero-header-row">
+            <h1>Learn. <span>Build. Innovate. <b style="font-weight: 900;">Together!</b></span></h1>
+            <div class="partner-container">
+                <img src="assets/img/bitlogo.png" alt="BitWise Logo">
+                <img src="assets/img/raftlogo.png" alt="RAFT Logo">
+            </div>
+        </div>
+
+        <div class="hero-body">
+            <div class="hero-left">
+                <p class="hero-description">
+                    bitWise Academy and RAFT have partnered to create a seamless learning experience, successfully bridging STEAM enrichment, online learning, and practical, hands-on projects.
+                </p>
+            </div>
+            <div class="hero-right">
+                <img src="assets/img/image_5a0bd5.png" class="kid-photo" alt="Student coding">
+            </div>
+        </div>
+    </section>
+
+    <div class="bottom-cta">
+        <div class="cta-text">
+            Ready to apply what you’ve learned?<br>
+            Hands-on projects start here.
+        </div>
+        <a href="#" class="explore-btn">Explore RAFT Kits</a>
+    </div>
+
+</body>
+</html>
