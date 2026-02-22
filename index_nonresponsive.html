@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitwise x RAFT Collaboration</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body, html {
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden; /* Strictly above the fold */
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+        }
+
+        /* Top Navigation Area */
+        .header-img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #373a6d; /* Exact navy from design */
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 40px 60px;
+            color: white;
+            position: relative;
+        }
+
+        /* One-line Heading and Logos */
+        .hero-header-row {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            white-space: nowrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .hero-header-row h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            font-weight: bold;
+        }
+
+        .hero-header-row h1 span {
+            font-weight: normal;
+        }
+
+        .partner-container {
+            background: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        /* Set to exactly 0.75 inches (72px at 96dpi) */
+        .partner-container img {
+            height: 72px; 
+            width: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        /* Content Layout: Text Left, Kid Image Right */
+        .hero-body {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .hero-left {
+            flex: 1.2;
+        }
+
+        .hero-description {
+            font-size: 1.35rem;
+            line-height: 1.5;
+            color: #ffffff;
+            max-width: 850px;
+        }
+
+        .hero-right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .kid-photo {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 5px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Bottom Section */
+        .bottom-cta {
+            height: 180px;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 60px;
+        }
+
+        .cta-text {
+            color: #2d2e5f;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .explore-btn {
+            background-color: #3fc3ff;
+            color: #000;
+            text-decoration: none;
+            padding: 18px 45px;
+            border-radius: 50px;
+            font-size: 1.5rem;
+            font-weight: 900;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+    </style>
+</head>
+<body>
+
+    <img src="assets/img/hero.jpg" class="header-img" alt="Navigation">
+
+    <section class="hero">
+        <div class="hero-header-row">
+                <h1>Learn. <span>Build. Innovate. <b style="font-weight: 900;">Together!</b></span></h1>            <div class="partner-container">
+                <img src="assets/img/bitlogo.png" alt="BitWise Logo">
+                <img src="assets/img/raftlogo.png" alt="RAFT Logo">
+            </div>
+        </div>
+
+        <div class="hero-body">
+            <div class="hero-left">
+                <p class="hero-description">
+                    bitWise Academy and RAFT have partnered to create a seamless learning experience, successfully bridging STEAM enrichment, online learning, and practical, hands-on projects. Students master emerging technology areas, math, science, coding, and engineering concepts. They immediately reinforce their knowledge by implementing these concepts with RAFT's high-quality STEAM kits.
+                </p>
+            </div>
+            <div class="hero-right">
+                <img src="assets/img/image_5a0bd5.png" class="kid-photo" alt="Student coding">
+            </div>
+        </div>
+    </section>
+
+    <div class="bottom-cta">
+        <div class="cta-text">
+            Ready to apply what you’ve learned?<br>
+            Hands-on projects start here.
+        </div>
+        <a href="https://raft.net/for-educators/steam-activities/steam-project-kits/" target="_blank" rel="noopener noreferrer" class="explore-btn">
+            Explore RAFT Kits
+        </a>
+    </div>
+
+</body>
+</html>
+
